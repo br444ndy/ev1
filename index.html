@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- CSS de Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <!-- Vamos a buscar la biblioteca Chart.js-->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+            integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <style>
+            @import url("@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;600&display=swap");
+            :root {
+                --bs-body-font-family: 'Akshar', sans-serif;
+                --bs-body-color: #f7f7e6;
+                --bs-body-bg: #030114;
+            }
+            body {
+                font-weight: 300;
+                background-color: #6885B5 ;                 
+               
+            
+             
+            }
+            
+            h1 {
+                font-size: calc(7.5rem + 7.5vw);
+                font-family: monospace;
+                line-height: 0.8;
+                letter-spacing: 0.2rem;
+            }
+            h1 span {
+                font-size: 18%;
+            }
+            
+        </style>
+        <title>Coffee Beans</title>
+    </head>
+    <body>
+          
+        <header class="titular">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mx-auto text-center align-self-end">
+                        <h1 class="my-5">
+                          ☕                            
+                        </h1>
+                        <h3 class="fs-5 mb-3">Los granos de Café en el mundo.</h3>
+                        <p>By <a href="https://github.com/br444ndy">Javiera Mercado</a></p>
+                        <p class="small">PUBLICADO EL 12 DE MAYO, 2022</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <p class="lead">Sin duda alguna el Café ha dejado de ser solo una bebida, hoy en dia es todo un fenómeno de la mano de lo que se denomina como Café de Origen </p>
+
+                        <p>Evidentemente el término "Origen" refiere al lugar de procedencia del Café, y es justamente ese sello identitario lo que atrae a especializados consumidores</p>
+
+                        <p>El Café de origen es aquel que proviene de un único productor original,de una zona de cultivo concreta, de una hacienda o finca, con cierto tipo de suelo, altitud , humedad, etc </p>
+
+                        <p>Sin embargo , antes de entrar en detalles especificos, esto es: qué expecializada finca produce qué y donde y a qué altitud y que certificaciones obtuvo la cosecha y cual es el cuerpo y el retrogusto,etc,etc. 
+                             se propone como siempre inciar desde lo básico, esto es en este contexto, los granos de café y por supuesto entendiendo como configuran el mundo (el de si mismos y el nuestro) desde que son cosechados. </p>
+                          
+                        <p> El café proviene de lo que se denomina cereza de café, la cual contiene en su interior una semilla; esta es la que viene a nuestras mentes cuando pensamos en café en grano. </p>
+                        <p> Estas semillas se encuentran en diferentes tonalidades que van desde el verde y sus matices hasta el azul.</p>
+
+                        
+                        
+        <title>Línea temporal</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md- mx-auto">
+                    <h1 class="mt-5 text-center"></h1>
+                    <div id="secuencia" class="m-5"></div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            
+            var peliculas = [
+                { img: "https://i.pinimg.com/564x/a7/ed/03/a7ed03d5aa1766ffb723ce807d2a6849.jpg", txt: "Grano Arábico y Grano Robusta" },
+                { img: "https://i.pinimg.com/originals/b6/bb/43/b6bb43679f89e3698b82e95acdc3dc43.jpg", txt: "Granos Verdes" },
+                { img: "https://i.pinimg.com/564x/97/7e/12/977e129d2e436ec994d72ac113de42d5.jpg", txt: "Granos Tostados" },
+              
+                { img: "https://5.imimg.com/data5/DR/MQ/PI/SELLER-61908665/robusta-parchment-green-coffee-beans-500x500.jpg", txt: "Grano Amarillo" },
+           
+            ];
+            //según sea par o impar se arma para un lado o el otro
+            peliculas.forEach(function (p, i) {
+                if (i % 2 == 0) {
+                    document.getElementById("secuencia").innerHTML +=
+                        '<figure class="row d-flex align-items-center"><img src="' +
+                        p.img +
+                        '" class="img-fluid col-12 col-md-6 rounded-circle" /><figcaption class="col-12 col-md-6"><p class="small py-2 text-center text-md-start">' +
+                        p.txt +
+                        "</p></figcaption></figure>";
+                } else {
+                    document.getElementById("secuencia").innerHTML +=
+                        '<figure class="row d-flex align-items-center"><img src="' +
+                        p.img +
+                        '" class="img-fluid col-12 col-md-6 rounded-circle order-md-2" /><figcaption class="col-12 col-md-6 order-md-1"><p class="small py-2 text-center text-md-end">' +
+                        p.txt +
+                        "</p></figcaption></figure>";
+                }
+            });
+        </script>
+                    
+
+
+                        <p> 1. Gráfico que muestra el color de las semillas de café cuando son cosechadas.</p>
+
+                                   
+                        
+                        <canvas id="color" width="600" height="200" class="mb-5"></canvas>
+
+                        <p> Existen dos tipos de granos, los Arábicos y los Robusta, sin embargo ambos se procesan usando los mismos métodos.
+                            De todas maneras se muestra a continuación los métodos para cada especie por separado, dado que los granos Arábicos tienen mayor cantidad 
+                        de datos en la base de datos si se les compara con robusta; mezclarles podría no reflejar la realidad para la variedad Robusta.   </p>
+
+
+                        <p> 2. Gráfico que muestra los métodos que se utilizan para los granos Arábicos:</p>
+                    </div>
+                    
+
+                    <div class="col-md-10 mx-auto">
+                        <canvas id="metodo_arabica" width="400" height="100" class="mb-5"></canvas>
+                    </div>
+                    <div class="col-md-6 mx-auto">
+                        <p>3.Gráfico para los métodos de procesamiento para la especie Robusta:</p>
+
+                        <div class="col-md-10 mx-auto">                            
+                            <canvas id="metodo_robusta" width="600" height="200" class="mb-5"></canvas>
+                        </div>    
+                        <div class="col-md-6 mx-auto">
+                            <p>Brasil es el primer exportador de café en el mundo, debido al volumen de granos de café producidos anualmente
+                                hemos decidido mostrar las variedades que oferta este magnate de la industria Cafetera </p>
+                                <p> 4. Gráfico que muestra la variedad de granos producidos por Brasil.</p>
+                        </div>
+    
+                        <div class="col-md-10 mx-auto">
+                            <canvas id="Brasil" width="400" height="200" class="mb-5"></canvas>
+                        </div>
+                        <div class="col-md-6 mx-auto">
+                           
+                            <p>Indonesia un Archielago ubicado en Asia, es un origen sin el cual no se puede entender  la historia del café en los países productores, donde la palabra “Java” se utiliza como sinónimo de café </p>
+                            <p>5. Gráfico que muestra la variedad de granos cultivados en Indonesia</p>
+                        </div>
+
+                              
+                        <div class="col-md-10 mx-auto">
+                            <canvas id="Indonesia" width="400" height="200" class="mb-5"></canvas>
+                        </div>
+                        <div class="col-md-6 mx-auto">
+                            <p> </p>
+                        </div>
+
+
+
+
+                    <p>
+                        <em>A traves de las visualizaciones podemos comprender e identificar tendencias en la producción y procesamiento de los granos del café, 
+                            lo cierto es que lo aqui mostrado es una pequeña parte de la larga cadena de procesos que convergen en tu tazita de café cada mañana.</em>
+                    </p>
+
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-cierre">
+        <div class="container">
+            <div class="row py-3">
+                <div class="col text-center"><small>Javiera Mercado  | 12 de mayo, 2022</small></div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+        integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+<script>
+    async function todo() {
+    //el fetch
+    const consulta = await fetch("https://raw.githubusercontent.com/br444ndy/c8/main/datos.json");
+    const data = await consulta.json();  
+    console.log(data);
+
+    var green  = 0;
+    var bluish = 0;
+    var blue = 0;
+    var none = 0;
+    //hora d consultar al json x los colores 
+    data.forEach((c) => {
+      if (c.color == "Green") {
+            green = green + 1;
+    } else if (c.color == "Blue-Green") {
+        blue = blue + 1;
+    } else if (c.color == "Bluish-Green"){
+        bluish = bluish + 1;
+    } else {
+        none = none + 1;
+    }
+    
+});
+  // el chart de colores de las semillas sin tostar
+  new Chart(document.getElementById("color").getContext("2d"), {
+    type: "doughnut",
+    data: {
+        labels: ["Green", "Blue-Green", "Bluish-Green","None"],
+        datasets: [{ data: [green, blue, bluish, none], label: "Cantidad de semillas sin tostar de este color", backgroundColor: ["#808000", "#3CB371", "#008080",  "	#FA8072" ] }],
+    },
+        options: {
+        animation: false,
+        layout: {
+            padding: -2,
+        },
+    },     
+});
+
+var A_washandwet = 0;
+var A_natydry = 0;
+var A_honey = 0;
+var A_semi = 0;
+var A_otras = 0; 
+
+
+//preguntemosle al json por métodos para granos arabicos 
+
+data.forEach((a) => {
+    if (a.especie == "Arabica" && a.metodo == "Washed / Wet") {
+        A_washandwet = A_washandwet + 1;
+    } else if (a.especie == "Arabica" && a.metodo == "Natural / Dry"){
+        A_natydry = A_natydry +1;
+    } else if (a.especie == "Arabica" && a.metodo == "Pulped natural / honey"){
+        A_honey = A_honey + 1;
+    }else if (a.especie == "Arabica" && a.metodo == "Semi-washed / Semi-pulped"){
+        A_semi = A_semi + 1;
+    } else if (a.especie == "Arabica" && a.metodo == "Other")
+    {A_otras = A_otras +1;
+        }
+    });
+
+     // el chart de metodo y grano arabico
+  new Chart(document.getElementById("metodo_arabica").getContext("2d"), {
+    type: "doughnut",
+    data: {
+        labels: ["Lavado/húmedo", "Secado Natural", "Pulpa Natural/Honey","Semi lavado/Semi pulpado","Otros"],
+        datasets: [{ data: [A_washandwet, A_natydry, A_honey, A_semi, A_otras], label: "Cantidad de granos Arábicos usando este método", backgroundColor: ["#808000", "#3CB371", "#008080",  "#FA8072", 	"#FFC0CB" ] }],
+    },
+        options: {
+        animation: true,
+        layout: {
+            padding: 50,
+        },
+    },     
+});
+
+var R_natydry = 0;
+var R_washandwet = 0;
+var R_unknown = 0;
+
+//preguntemosle al json por los granos robusta 
+
+data.forEach((r) => {
+    if (r.especie == "Robusta" && r.metodo == "Washed / Wet") {
+        R_washandwet = R_washandwet + 1;
+    } else if (r.especie == "Robusta" && r.metodo == "Natural / Dry"){
+        R_natydry = R_natydry +1;
+    } else if (r.especie == "Robusta" && r.metodo == "Unknown")
+    {R_unknown = R_unknown +1;
+        }
+    });
+
+  // el chart de metodo y grano robusta
+  new Chart(document.getElementById("metodo_robusta").getContext("2d"), {
+    type: "pie",
+    data: {
+        labels: ["Lavado/húmedo", "Secado Natural", "Métodos Desconocidos"],
+        datasets: [{ data: [R_washandwet, R_natydry, R_unknown,], label: "Cantidad  de granos Arábicos usando este método", backgroundColor: ["#808000", "#3CB371", "#008080" ] }],
+    },
+        options: {
+        animation: true,
+        layout: {
+            padding: 10,
+        },
+    },     
+});
+
+
+
+
+var in_sulawesi = 0
+var in_java = 0
+var in_sumatra_lintong  = 0
+var in_typica = 0
+var in_Mandheling = 0
+
+data.forEach((ins) => {
+    if (ins.origen == "Indonesia" && ins.variety == "Sulawesi") {
+        in_sulawesi =  in_sulawesi + 1;
+    } else if (ins.origen == "Indonesia" && ins.variety == "Java"){
+        in_java = in_java +1;
+    } else if(ins.origen == "Indonesia" && ins.variety == "Sumatra Lintong"){    
+        in_sumatra_lintong = in_sumatra_lintong + 1;
+    } else if(ins.origen == "Indonesia" && ins.variety == "Typica"){
+        in_typica = in_typica +1;
+    } else if(ins.origen == "Indonesia" && ins.variety == "Mandheling"){
+        in_Mandheling = in_Mandheling +1;            
+              }
+    });
+
+      // el chart de Indonesia
+  new Chart(document.getElementById("Indonesia").getContext("2d"), {
+    type: "pie",
+    data: {
+        labels: ["Sulawesi", "Java", "Sumatra Lingtong","Typica","Mandheling"],
+        datasets: [{ data: [in_sulawesi, in_java, in_sumatra_lintong,in_typica,in_Mandheling], label: "cantidad de la variedad", backgroundColor: ["#808000", "#3CB371", "#E0DD8B", "#47400C","#819234"	 ] }],
+    },
+        options: {
+        animation: true,
+        layout: {
+            padding: 10,
+        },
+    },     
+});
+
+
+var brazil_mundonovo = 0
+var brazil_catuai = 0
+var brazil_yellow = 0
+var brazil_bourbon = 0
+
+//pregunta para brasil
+
+data.forEach((b) => {
+    if (b.origen == "Brazil" && b.variety == "Mundo Novo") {
+        brazil_mundonovo  = brazil_mundonovo  + 1;
+    } else if (b.origen == "Brazil" &&  b.variety == "Catuai"){
+        brazil_catuai = brazil_catuai +1;
+    } else if(b.origen == "Brazil" &&  b.variety == "Yellow Bourbon"){    
+        brazil_yellow = brazil_yellow + 1;
+    } else if(b.origen == "Brazil" &&  b.variety == "Bourbon"){
+        brazil_bourbon = brazil_bourbon +1;
+          }
+    });
+
+
+     // el chart de brazil
+     new Chart(document.getElementById("Brasil").getContext("2d"), {
+        type: "pie",
+        data: {
+            labels: ["Mundo Novo", "Catuai", "Yellow Bourbon","Bourbon",],
+            datasets: [{ data: [brazil_mundonovo, brazil_catuai, brazil_yellow ,brazil_bourbon], label: "cantidad de la variedad", backgroundColor: ["#808000", "#614D1D" ,"#D9CA6D", "#96681D" ] }],
+        },
+            options: {
+            animation: true,
+            layout: {
+                padding: 10,
+            },
+        },     
+    });
+
+
+
+
+
+
+
+};
+
+
+//todo (); 
+todo().catch((error) => console.error(error));
+
+    
+</script>
+                    <script>
+                        //Para cambiar todos los links de una
+                        document.querySelectorAll("a").forEach((a) => a.classList.add("link-danger"));
+                    </script>
+                </body>
+            </html>
